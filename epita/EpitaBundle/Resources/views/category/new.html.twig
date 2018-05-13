@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>category creation</h1>
+
+    {{ form(form) }}
+
+    <a class="record_actions"> <br>
+        
+    
+        <a class="btn btn-default btn-xs" href="{{ path('category') }}">
+            Back to the list
+        </a>
+    
+</a>
+{% endblock %}

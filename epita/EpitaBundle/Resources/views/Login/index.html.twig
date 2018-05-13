@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+{% block title %} Login {% endblock %}
+
+{% block body -%}
+    <div class="container">
+
+        <form class="form-signin" action="{{ path('login_check') }}"  method = "post">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <input type="text" class="input-block-level" name = "username" placeholder="Username" ><br><br>
+            <input type="password" class="input-block-level" name = "password" placeholder="Password"><br><br>
+            <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+        </form>
+
+    </div>
+    {% endblock %}

@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+{% block title %} Welcome {% endblock %}
+
+{% block body -%}
+    <h1>Welcome  To Virtual Help Desk</h1>
+
+
+    <table class="records_list table">
+        <thead>
+
+        </thead>
+        <tbody>
+
+        <br>{#<a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/admin/">Admin</a> #}<br><br>
+        <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/category/">Category</a><br><br>
+        <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/questionanswer/">Question and Answer</a><br><br>
+        <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/resource/">Resource</a><br><br>
+
+
+        </tbody>
+    </table>
+{% endblock %}

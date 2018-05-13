@@ -1,0 +1,43 @@
+{% extends '::base.html.twig' %}
+{% block title %} Resources {% endblock %}
+
+{% block body -%}
+    <h1>Resource</h1>
+    
+    <div id="topbar">
+            {% block topbar %}
+                <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/admin/">Admin</a>
+                <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/category/">Category</a>
+                <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/questionanswer/">Question and Answer</a>
+                <a class="btn btn-default btn-xs" href="/epita/web/app_dev.php/resource/">Resource</a>
+            {% endblock %}
+	</div>
+
+    <table class="records_list table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Resource</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('resource_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.resource }}</td>
+                <td>
+                        <a class="btn btn-default btn-xs" href="{{ path('resource_show', { 'id': entity.id }) }}">show</a>
+                        <a class="btn btn-default btn-xs" href="{{ path('resource_edit', { 'id': entity.id }) }}">edit</a>
+                    
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+            <a class="btn btn-default btn-xs" href="{{ path('resource_new') }}">
+                Add Resource
+            </a>
+       
+    {% endblock %}

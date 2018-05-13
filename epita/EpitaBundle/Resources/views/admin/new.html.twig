@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>admin creation</h1>
+
+    {{ form(form) }}
+
+    <a class="record_actions"> </a>
+    <br>
+    
+        <a class="btn btn-default btn-xs"  href="{{ path('admin') }}">
+            Back to the list
+        </a>
+    
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Edit Admin</h1>
+    
+<table>
+    {{ form(edit_form) }}
+
+    <a class="record_actions"> </a>
+    
+        <a class="btn btn-default btn-xs" href="{{ path('admin') }}">
+            Back to the list
+        </a> 
+    
+    {{ form(delete_form) }}
+
+    
+</table>
+{% endblock %}
